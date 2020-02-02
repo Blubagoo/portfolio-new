@@ -1,0 +1,31 @@
+.footer {
+	display: flex;
+	border: 1px solid black;
+	background-color: #000;
+}
+.footer-wrapper {
+	width: 1200px;
+	margin: 30px auto;
+}
+.footer .footer-wrapper h4, .footer .footer-wrapper p {
+	color: white;
+}
+.footer .footer-wrapper p {
+	font-weight: 200;
+	color: #F2309B;
+} 
+.footer .footer-wrapper h4 {
+	font-size: 30px;
+}
+.footer .sect {
+	display: flex;
+}
+.footer .sect .info-wrapper {
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.footer .sect img {
+	border: 2px solid #F2309B;
+	padding: 4px;
+	border-radius: 10px;
+}

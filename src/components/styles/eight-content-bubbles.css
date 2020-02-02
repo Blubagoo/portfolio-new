@@ -1,0 +1,22 @@
+.bubble p {
+	color: white;
+}
+.bubble h3 {
+	color: #F2309B;
+	font-size: 24px;
+	font-weight: 700;
+}
+.bubble {
+	width: 24%;
+	text-align: center;
+	margin-bottom: 40px;
+	margin-right: 8px;
+}
+.eight-bubbles {
+	max-width: 1200px;
+	margin: 60px auto;
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 50px;
+	padding-bottom: 70px;
+}

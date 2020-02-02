@@ -1,0 +1,15 @@
+.container {
+	width: 100%;
+}
+h1,h2,h3 {
+	font-family: 'Waiting for the Sunrise', cursive;
+	margin: 0;
+}
+h4,h5,h6,p {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+p {
+	font-size: 18px;
+	font-weight: 600;
+}

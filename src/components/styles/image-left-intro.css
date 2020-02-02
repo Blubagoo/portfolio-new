@@ -1,0 +1,51 @@
+.kipo-sect .img-wrapper {
+	position: relative;
+	height: 325px;
+	display: flex;
+	overflow:hidden;
+	border-right: 10px solid black;
+	flex: 1;
+}
+.kipo-sect .img-wrapper img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	transition: all 10s linear;
+}
+.kipo-sect .info-wrapper {
+	padding-left: 30px;
+	flex: 1;
+}
+.kipo-sect .info-wrapper p {
+	font-family: 'Roboto', cursive;
+	max-width: 500px;
+	font-weight: 500;
+	font-size: 20px;
+}
+.kipo-sect .info-wrapper h1 {
+	font-family: 'Waiting for the Sunrise', cursive;
+	color: #F2309B;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .kipo-sect .img-wrapper img {
+    animation: slideLeft 1 10s ease-out;
+    animation-fill-mode: forwards;
+  }
+}
+@keyframes slideLeft {
+  from {
+  }
+  to {
+    margin: 0;
+  }
+}
+.kipo-sect {
+	height: 358px;
+	display: flex;
+	justify-content: center;
+	padding: 200px;
+	align-items: center;
+	padding-bottom: 400px;
+}
