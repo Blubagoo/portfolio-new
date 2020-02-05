@@ -56,6 +56,10 @@
 }
 .form-left .cta-wrapper p {
 	max-width: 500px;
+	text-decoration: none;
+}
+.form-left .cta-wrapper a {
+	text-decoration: none;
 }
 .form-left .form-wrapper button {
 	color: #792855;

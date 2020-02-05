@@ -3,8 +3,9 @@
 }
 .bubble h3 {
 	color: #F2309B;
-	font-size: 24px;
+	font-size: 22px;
 	font-weight: 700;
+	margin-bottom: 6px;
 }
 .bubble {
 	width: 24%;

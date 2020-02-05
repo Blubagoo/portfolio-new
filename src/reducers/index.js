@@ -2,6 +2,7 @@
 
 const initialState = {
 	data: [],
+	view: 'home',
 }
 
 

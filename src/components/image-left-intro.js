@@ -40,7 +40,7 @@ export default class ImageleftIntro extends React.Component {
 					<img src={layerBG} alt='kipo age of the wonderbeasts fan art'  style={{zIndex: '0'}} />
 				</div>
 				<div className='info-wrapper'>
-					<h1>Design. Develope. Have Fun.</h1>
+					<h1>Design. Develop. Have Fun.</h1>
 					<p>I'm a developer who can manage projects from start to finish, while picking up on bottlenecks
 					 such as graphic updates and simple content additions. I love to jump in and learn new things
 					 and this allows me to round out my skillset with valuable skills like photoshop, nDesign, 

@@ -2,6 +2,7 @@ import React from 'react';
 import './styles/footer.css';
 
 const photo = require('./images/headshot.jpg');
+const timbercats = require('./images/timbercats-singing-trans.png')
 
 export default class Footer extends React.Component {
 	constructor(props) {
@@ -19,6 +20,9 @@ export default class Footer extends React.Component {
 							<p>Dothan, AL</p>
 							<p>(334)500-0066</p>
 						</div>
+					</div>
+					<div className='sect-two'>
+						<img src={timbercats} alt='Jim Tisdale' />
 					</div>
 				</div>
 			</div>

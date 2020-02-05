@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import config from './config'
 import './styles/form-left-cta.css';
 
 export default class FormLeftCTA extends React.Component {
@@ -30,16 +32,20 @@ export default class FormLeftCTA extends React.Component {
 					<h2>Got questions? Looking for a solution? Let's get in touch.</h2>
 					<p>I currently am available for weekend work and possible extended part-time contract work</p>
 					<div className='btns-wrapper'>
+					<Link to="/projects">
 						<div className='btn-border'>
 							<div className='btn'>
 								<p>PROJECTS</p>
 							</div>
 						</div>
+					</Link>
+					<Link to="/about">
 						<div className='btn-border'>
 							<div className='btn'>
 								<p>BIO</p>
 							</div>
 						</div>
+					</Link>
 					</div>
 				</div>
 			</div>

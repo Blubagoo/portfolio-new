@@ -5,7 +5,8 @@
 }
 .footer-wrapper {
 	width: 1200px;
-	margin: 30px auto;
+	margin: 0 auto;
+	display: flex;
 }
 .footer .footer-wrapper h4, .footer .footer-wrapper p {
 	color: white;
@@ -19,6 +20,14 @@
 }
 .footer .sect {
 	display: flex;
+	flex: 1;
+	margin: 20px;
+}
+.footer .sect-two {
+	flex: 1;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
 }
 .footer .sect .info-wrapper {
 	margin-left: 20px;
@@ -28,4 +37,11 @@
 	border: 2px solid #F2309B;
 	padding: 4px;
 	border-radius: 10px;
+	width: 120px;
+	height: 120px;
+	display: block;
+}
+.footer .sect-two img {
+	display: block;
+	height: 150px;
 }

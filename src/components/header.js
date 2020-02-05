@@ -1,6 +1,9 @@
 import React from 'react';
 import config from './config';
+import { Link } from 'react-router-dom';
+
 import './styles/header.css';
+
 const LOGO = require('./images/portfolio-logo-inverse.png');
 
 export default class Header extends React.Component {
@@ -17,13 +20,13 @@ export default class Header extends React.Component {
 					</div>
 					<div className='nav-bar'>
 						<div className='nav-item'>
-							<p style={{color:config.colorPrimary}}>Home</p>
+							<Link to="/" style={{color:config.colorPrimary}}>Home</Link>
 						</div>
 						<div className='nav-item'>
-							<p style={{color:config.colorPrimary}}>Projects</p>
+							<Link to="/projects" style={{color:config.colorPrimary}}>Projects</Link>
 						</div>
 						<div className='nav-item'>
-							<p style={{color:config.colorPrimary}}>About</p>
+							<Link to="/about" style={{color:config.colorPrimary}}>About</Link>
 						</div>
 					</div>
 				</div>
