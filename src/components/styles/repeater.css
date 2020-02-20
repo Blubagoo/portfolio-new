@@ -1,0 +1,33 @@
+.row .listing {
+	width: 100%;
+}
+.row {
+	display: flex;
+	flex-direction: column;
+}
+.description{
+	display: flex;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.listing {
+	width: 50%;
+	margin: 20px;
+	border-radius: 30px;
+	padding: 20px;
+	box-shadow: 0 8px 3px -2px rgba(119,4,68, .4);
+}
+.listing {
+	background: linear-gradient(#e92d95,#770444);
+}
+.listing h3, .listing p, .listing em {color: white;}
+.listing h3 {
+	font-size: 20px;
+}
+.listing em {
+	font-size: 16px;
+	font-weight: 400;
+}
+.listing .name-wrapper {
+	margin-bottom: 20px;
+}

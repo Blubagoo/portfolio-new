@@ -1,9 +1,10 @@
 import React from 'react';
+
 import ImageLeftIntro from '../components/image-left-intro';
 import ThreeBoxSectionDivider from '../components/three-box-section-divider';
 import EightContentBubbles from '../components/eight-content-bubbles';
 import FormLeftCTA from '../components/form-left-cta'
-import BG from '../components/images/polygon-texture-white.jpg';
+
 import '../components/styles/home.css';
 
 export default class Home extends React.Component {
@@ -14,7 +15,7 @@ export default class Home extends React.Component {
 	render () {
 		return (
 			<div className='home'>
-				<div className='first-section' style={{backgroundImage: `url(${BG})`,}}>
+				<div className='first-section'>
 					<ImageLeftIntro />
 				</div>
 				<div className='colorDark-bg'>

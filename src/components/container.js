@@ -1,8 +1,11 @@
 import React from 'react';
+
 import Header from './header';
 import Main from './main';
 import Footer from './footer';
+
 import './styles/container.css';
+import BG from '../components/images/polygon-texture-white.jpg';
 
 export default class Container extends React.Component {
 	constructor(props) {
@@ -12,7 +15,7 @@ export default class Container extends React.Component {
 	render() {
 		console.log('rendering container');
 		return (
-			<div>
+			<div style={{backgroundImage: `url(${BG})`,}}>
 				<Header />
 				<Main />
 				<Footer />

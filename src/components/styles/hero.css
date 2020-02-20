@@ -1,0 +1,30 @@
+.hero-sk-rt {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	padding-left: 60px;
+}
+.hero-sk-rt .intro-wrapper {
+	width: 50%;
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+}
+.hero-sk-rt .intro-wrapper h2 {
+	font-size: 30px;
+	padding-bottom: 14px;
+}
+.hero-sk-rt .intro-wrapper p {
+	font-size: 20px;
+	line-height: 1.7;
+}
+.hero-sk-rt .graph-wrapper {
+	display: flex;
+	justify-content: center;
+	width: 50%;
+}
+.hero-sk-rt .graph-wrapper img {
+	width: 60%;
+}

@@ -5,8 +5,7 @@ const config = {
 	colorPrimary: '#F2309B',
 	colorLight: '#F6F6F6',
 	colorSecondary: '#E7E7E7',
-	sectionOneImage: './images/'
-	
+	sectionOneImage: './images/',
 }
 
 export default config;

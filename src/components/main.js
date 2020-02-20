@@ -3,7 +3,7 @@ import Home from '../containers/home';
 import Projects from '../containers/projects';
 import About from '../containers/about';
 import { connect } from 'react-redux';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 
 export class Main extends React.Component {
 	constructor(props) {
