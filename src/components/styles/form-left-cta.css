@@ -27,6 +27,7 @@
 	max-width: 1200px;
 	margin: 200px auto;
 	position: relative;
+	justify-content: center;
 }
 .form-left .form-wrapper {
 	flex: 1;
@@ -41,7 +42,6 @@
 	color: white;
 }
 .form-left .cta-wrapper {
-	flex: 2;
 	padding-left: 30px;
 	padding-top: 70px;
 }
@@ -96,4 +96,23 @@
 .btn-border:hover  .btn {
 	background: transparent;
 	color: white;
+}
+@media only screen and (max-width: 1024px) {
+	.form-left {
+		margin: 60px;
+	}
+}
+@media only screen and (max-width: 550px) {
+	.form-left {
+		margin: 60px 20px;
+		flex-direction: column;
+		align-items: center;
+	}
+	.form-left .form-wrapper {
+		width: 100%;
+	}
+	.form-left .cta-wrapper {
+		padding: 20px;
+
+	}
 }

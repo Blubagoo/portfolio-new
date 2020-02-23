@@ -9,7 +9,6 @@
 	padding: 20px 0;
 	padding-bottom: 0;
 }
-.header
 .nav-bar {
 	display: flex;
 	align-items: flex-end;
@@ -32,7 +31,6 @@
 	line-height: 1;
 	font-weight: 600px;
 	text-decoration: none;
-
 }
 .nav-item {
 	margin: 8px 13px;
@@ -49,4 +47,34 @@
 	background: linear-gradient(#F2309B, #F6F6F6, #E7E7E7);
 	height: 25px;
 	margin-bottom: -2px;
+}
+
+@media only screen and (max-width: 1275px) {
+	.head-wrapper {
+		padding: 20px 60px;
+	}
+}
+@media only screen and (max-width: 715px) {
+	.head-wrapper {
+		padding: 20px;
+		padding-bottom: 40px;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.nav-item a {
+		font-size: 26px;
+	}
+	.nav-item {
+		padding: 0;
+		margin: 10px;
+		margin-right: 16px;
+	}
+}
+@media only screen and (max-width: 470px) {
+	.nav-item a {
+		font-size: 20px;
+	}
+	.nav-item {
+		margin: 10px;
+	}
 }
