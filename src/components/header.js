@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import './styles/header.css';
 
-const LOGO = require('./images/portfolio-logo-inverse.png');
+const LOGO = require('./images/rune-logo.jpg');
 
 export default class Header extends React.Component {
 	constructor(props) {
