@@ -29,6 +29,11 @@ export default class Header extends React.Component {
 							<Link to="/about" style={{color:config.colorPrimary}}>About</Link>
 						</div>
 					</div>
+					<div class="cta">
+						<div class="form-btn">
+							<p>LET'S CONNECT</p>
+						</div>
+					</div>
 				</div>
 				<div className='hr-bar'>
 
