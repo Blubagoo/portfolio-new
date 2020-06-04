@@ -19,12 +19,12 @@
 	border: 2px solid #F2309B;
 	border-radius: 10px;
 	width: 120px;
+	padding: 2px;
 }
 .img-wrapper img {
 	width: 100%;
 	display: block;
 	border-radius: 8px;
-	padding: 2px;
 }
 .nav-item a {
 	font-size: 30px;
