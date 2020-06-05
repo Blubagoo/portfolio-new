@@ -2,9 +2,11 @@
 	display: flex;
 	width: 100%;
 	align-items: center;
-	justify-content: center;
-	padding: 20px;
-	padding-left: 60px;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding-top: 100px;
+	padding-bottom: 200px;
+
 }
 .hero-sk-rt .intro-wrapper {
 	width: 50%;
@@ -22,7 +24,7 @@
 }
 .hero-sk-rt .graph-wrapper {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
 	width: 50%;
 }
 .hero-sk-rt .graph-wrapper img {

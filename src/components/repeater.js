@@ -12,9 +12,23 @@ export default class Repeater extends React.Component {
 			type: this.props.config.style
 		}
 	}
+	listBullets(array) {
+		console.log('arrar on bullets', array)
+		let bullets = array.map(item => {
+			console.log('item', item);
+			return <li>{item}</li>
+		});
+		return bullets;
+	}
 	render() {
 		let map = this.state.list.map((each,index) => {
 			console.log('each', each)
+			let bullets;
+			if(this.state.title === 'Experience') {
+				bullets = this.listBullets(each.bulletPoints);
+				console.log('bullets', bullets)
+
+			}
 			return (
 				<div className='listing' key={index} id={`${this.state.type}-${index}`}>
 					<div className='name-wrapper'>
@@ -22,6 +36,9 @@ export default class Repeater extends React.Component {
 						<em>({each.date.start} - {each.date.end})</em>
 					</div>
 					<p>{each.info}</p>
+					<ul>
+						{bullets}
+					</ul>
 				</div>
 			)
 		})

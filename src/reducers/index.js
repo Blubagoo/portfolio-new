@@ -6,7 +6,7 @@ const initialState = {
 	education: [
 		{
 			company: 'Thinkful - Full Stack Flex Program',
-			info: 'Course studies include FrontEnd Fundamentals, Github and Asynchronous Apps, Server-Side Fundamentals,  React/Redux, Advanced Computer Science',
+			info: 'Learned industry best practices and practical software development standards with a focus on HTML5, CSS3, JavaScript, jQuery, Node.JS, React, Redux, and algorithms and data structures. I created and deployed mobile-first applications while learning new languages and frameworks by collaborating several hours every week with a senior web developer.',
 			date: {
 				start: '02/24/2018',
 				end: '08/07/2018',
@@ -36,17 +36,16 @@ const initialState = {
 			title: 'Web Development Team Lead',
 			date: {
 				start:'01/22/19',
-				end: 'Currently Employed',
+				end: '05/29/20',
 			},
-		},
-		{
-			company: 'Tim Tolleson Design, LLC',
-			info: 'Short-term contract work maintaining plugins, debugging, and implementing new features.',
-			title: 'Wordpress/Joomla Developer',
-			date: {
-				start: '09/2018',
-				end: '01/2019',
-			},
+			bulletPoints: [
+				'Generated upwards of $50,000 in ad revenue yearly as a system administrator of a large network of websites',
+				'Designed and implemented concepts and software integrations as a web team liaison for all inter-departmental and customer-facing projects',
+				'Developed a node.js server to authenticate and track digital badges being used, saving the company $25,000',
+				'Leveraged React-Native to extend a Wordpress application to provide an iOS/Android experience for users',
+				'Integrated Salesforce and Wordpress to eliminate redundant processes',
+				'Mentored team member with non-technical background to be a junior WordPress developer'
+			]
 		},
 	],
 	homeArray: [

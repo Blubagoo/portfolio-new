@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './header';
 import Main from './main';
 import Footer from './footer';
+import Modal from './modal';
 
 import './styles/container.css';
 import BG from '../components/images/polygon-texture-white.jpg';
@@ -19,7 +20,7 @@ export default class Container extends React.Component {
 				<Header />
 				<Main />
 				<Footer />
-				<link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC|Rajdhani|Roboto|Waiting+for+the+Sunrise&display=swap" rel="stylesheet" />
+				<Modal />
 			</div>
 		);
 	}

@@ -21,14 +21,13 @@ export class About extends React.Component {
 			<div className='about'>
 				<HeroSkillsRight />
 				<Repeater
-					config={{style: 'two-halves', title: 'Experience'}}
+					config={{style: 'row', title: 'Experience'}}
 					list={this.state.experience}
 				/>
 				<Repeater
 					config={{style: 'row', title: 'Education',}}
 					list={this.state.education}
 				/>
-
 			</div>
 		)
 	}
