@@ -1,10 +1,47 @@
+.kipo-sect {
+	display: flex;
+	justify-content: center;
+	padding: 200px;
+	align-items: center;
+	padding-bottom: 400px;
+	position: relative;
+}
+.kipo-sect .text-area {
+	width: 50%;
+	padding: 30px;
+	z-index: 11;
+}
+.kipo-sect .text-area p,
+.kipo-sect .text-area a {
+	color: white;
+}
 .kipo-sect .img-wrapper {
+	background: transparent;
 	position: relative;
 	height: 350px;
 	display: flex;
 	overflow:hidden;
 	border-right: 10px solid black;
 	width: 55%;
+	transition: all .8s ease-out;
+	position: relative;
+	z-index: 1;
+}
+.kipo-sect .img-wrapper::before {
+	position: absolute;
+	border-radius: 10px;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+  background: linear-gradient(135deg, #D25796, #8FADB5);
+}
+.kipo-sect .img-wrapper:hover::before {
+	opacity: 1;
 }
 .kipo-sect .img-wrapper img {
 	position: absolute;
@@ -29,8 +66,19 @@
 	font-weight: 500;
 	font-size: 20px;
 }
+.kipo-sect .info-wrapper h2 {
+	margin-bottom: 8px;
+}
+.intro-title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 60px;
+}
 .kipo-sect .info-wrapper h1 {
 	color: #F2309B;
+	font-size: 60px;
 }
 @media (prefers-reduced-motion: no-preference) {
   .kipo-sect .img-wrapper img {
@@ -45,13 +93,7 @@
     margin: 0;
   }
 }
-.kipo-sect {
-	display: flex;
-	justify-content: center;
-	padding: 200px;
-	align-items: center;
-	padding-bottom: 300px;
-}
+
 
 @media only screen and (max-width: 1440px) {
 	.kipo-sect .img-wrapper {

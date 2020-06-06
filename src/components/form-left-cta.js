@@ -22,7 +22,7 @@ export default class FormLeftCTA extends React.Component {
 								<input type='text' id='cta-name' placeholder='Name' />
 								<input type='email' id='cta-email' placeholder='Email' />
 								<textarea style={{rows: '5',}} defaultValue='Message'></textarea>
-								<button>SUBMIT</button>
+								<button tyep='submit'>SUBMIT</button>
 							</legend>
 						</form>
 					</fieldset>
@@ -31,20 +31,16 @@ export default class FormLeftCTA extends React.Component {
 					<h2>Got questions? Looking for a solution? Let's get in touch.</h2>
 					<p>I currently am available for weekend work and possible extended part-time contract work</p>
 					<div className='btns-wrapper'>
-					<Link to="/projects">
-						<div className='btn-border'>
+						<Link to="/projects">
 							<div className='btn'>
 								<p>PROJECTS</p>
 							</div>
-						</div>
-					</Link>
-					<Link to="/about">
-						<div className='btn-border'>
+						</Link>
+						<Link to="/about">
 							<div className='btn'>
 								<p>BIO</p>
 							</div>
-						</div>
-					</Link>
+						</Link>
 					</div>
 				</div>
 			</div>

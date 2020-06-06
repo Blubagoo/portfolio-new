@@ -20,7 +20,7 @@ export default class ThreeBoxSectionDivider extends React.Component {
 					</div>
 					<div className='info-wrapper'>
 						<h2>Front-End</h2>
-						<p>HTML, CSS, JS, jQuery, React w/Redux, React-Native, Wordpress, Consuming API's</p>
+						<p>HTML, CSS, JS, jQuery, React w/Redux, React-Native, Consuming Web Services</p>
 					</div>
 				</div>
 				<div className='box'>
@@ -29,7 +29,7 @@ export default class ThreeBoxSectionDivider extends React.Component {
 					</div>
 					<div className='info-wrapper'>
 						<h2>Back-End</h2>
-						<p>Node.js,Exress, Server-Side React, MongoDB, Mongoose, Creating REST API's</p>
+						<p>Node.js,Exress, Server-Side React, MongoDB, Mongoose, REST API</p>
 					</div>
 				</div>
 				<div className='box'>

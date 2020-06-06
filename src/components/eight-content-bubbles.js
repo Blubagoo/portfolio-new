@@ -16,12 +16,12 @@ export default class EightContentBubbles extends React.Component {
 				</div>
 				<div className='bubble'>
 					<h3>REST API</h3>
-					<a href='https://github.com/Blubagoo/FlowState/tree/master/server'><p>FlowState</p></a>
+					<a href='https://github.com/Blubagoo/FlowState/tree/master/server'><p>FlowState: Thinful Capstone</p></a>
 				</div>
 				<div className='bubble'>
-					<h3>Custom Software Solutions</h3>
-					<p>Syndicate multiple systems together and increase workplace efficiency through 
-					better system integration</p>
+					<h3>Node.js</h3>
+					<a href="#"><p>Ad Rotator</p></a>
+					<a href="#"><p></p></a>
 				</div>
 				<div className='bubble'>
 					<h3>iOS/Android Solutions</h3>

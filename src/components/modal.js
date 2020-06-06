@@ -9,7 +9,7 @@ export const Modal = (props) => {
 	console.log('modal props', props)
 
 	return (
-		<AnchorLink href='#header-top' className='modal'>
+		<div className='modal'>
 			<div className='full-screen-modal' style={{zIndex: props.zIndex}}>
 				<div className='display-wrapper'>
 					<div className='img-wrapper'>
@@ -20,10 +20,10 @@ export const Modal = (props) => {
 					<i class="far fa-times-circle"></i>
 				</div>
 			</div>
-			<div className='to-top-modal'>
+			<AnchorLink href='#header-top' className='to-top-modal'>
 				<i className="fas fa-arrow-up"></i>
-			</div>
-		</AnchorLink>
+			</AnchorLink>
+		</div>
 	); 
 }
 const mapStateToProps = (state) => ({
