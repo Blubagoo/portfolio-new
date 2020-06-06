@@ -14,9 +14,9 @@ export default class Repeater extends React.Component {
 	}
 	listBullets(array) {
 		console.log('arrar on bullets', array)
-		let bullets = array.map(item => {
+		let bullets = array.map((item,index) => {
 			console.log('item', item);
-			return <li>{item}</li>
+			return <li key={index}>{item}</li>
 		});
 		return bullets;
 	}

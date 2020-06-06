@@ -10,14 +10,13 @@ export default class EightContentBubbles extends React.Component {
 		return (
 			<div className='eight-bubbles'>
 				<div className='bubble'>
-					<h3>Wordpress Themes</h3>
-					<p>Custom themes for your WordPress site with built-in woocommerce integration,
-					business or member directory, or simply to generate leads</p>
+					<h3>React.js w/Redux</h3>
+					<a href="https://github.com/Blubagoo/portfolio-new"><p>Portfolio( Isomorphic )</p></a>
+					<a href="https://github.com/Blubagoo/react-portfolio"><p>Portfolio( Older )</p></a>
 				</div>
 				<div className='bubble'>
 					<h3>REST API</h3>
-					<p>Whether it's creating WordPress and Node.js routes, or Consuming third-party
-					api's like Facebook or Twitter </p>
+					<a href='https://github.com/Blubagoo/FlowState/tree/master/server'><p>FlowState</p></a>
 				</div>
 				<div className='bubble'>
 					<h3>Custom Software Solutions</h3>

@@ -1,5 +1,10 @@
-.bubble p {
+.bubble a, .bubble p {
 	color: white;
+	text-decoration: none;
+	transition: all .3s ease-in;
+}
+.bubble p:hover {
+	color: #62e4c8;
 }
 .bubble h3 {
 	color: #F2309B;

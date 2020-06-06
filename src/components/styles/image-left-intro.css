@@ -18,6 +18,11 @@
 	padding-left: 30px;
 	width: 45%;
 }
+.kipo-sect .img-wrapper img {
+	width: 100%;
+	display: block;
+	border-radius: 8px;
+}
 .kipo-sect .info-wrapper p {
 	font-family: 'Roboto', cursive;
 	max-width: 500px;

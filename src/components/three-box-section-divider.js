@@ -1,5 +1,4 @@
 import React from 'react';
-import config from './config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDesktop } from '@fortawesome/free-solid-svg-icons';
 import { faServer } from '@fortawesome/free-solid-svg-icons';

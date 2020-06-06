@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import config from './config'
 import './styles/form-left-cta.css';
 
 export default class FormLeftCTA extends React.Component {
@@ -18,11 +17,11 @@ export default class FormLeftCTA extends React.Component {
 				<div className='form-wrapper' id="cta-form">
 					<h2>Contact Me</h2>
 					<fieldset>
-						<form role='form' onSubmit={this.handleSubmit.bind(this)}>
+						<form onSubmit={this.handleSubmit.bind(this)}>
 							<legend>
 								<input type='text' id='cta-name' placeholder='Name' />
 								<input type='email' id='cta-email' placeholder='Email' />
-								<textarea style={{rows: '5',}} >Message</textarea>
+								<textarea style={{rows: '5',}} defaultValue='Message'></textarea>
 								<button>SUBMIT</button>
 							</legend>
 						</form>

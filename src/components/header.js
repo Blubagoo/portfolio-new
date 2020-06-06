@@ -1,7 +1,7 @@
 import React from 'react';
 import config from './config';
 import { Link } from 'react-router-dom';
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import './styles/header.css';
 
@@ -12,14 +12,20 @@ export default class Header extends React.Component {
 		super(props);
 		console.log('this is the header props', props);
 	}
+	handleClick() {
+		if (window.location.pathname !== '/') {
+			window.location = '/#cta-form';
+		}
+		
+	}
 	render () {
 		return (
-			<div className='header' style={{backgroundColor: config.colorDark}}>
+			<div className='header' id='header-top' style={{backgroundColor: config.colorDark}}>
 				<div className='head-wrapper'>
 					<div className='slide-left'>
-						<div className='img-wrapper'>
+						<Link to='/' className='img-wrapper'>
 							<img src={LOGO} alt={config.name} />
-						</div>
+						</Link>
 						<div className='nav-bar'>
 							<div className='nav-item'>
 								<Link to="/" style={{color:config.colorPrimary}}>Home</Link>
@@ -32,9 +38,9 @@ export default class Header extends React.Component {
 							</div>
 						</div>
 					</div>
-					<div class='cta'>
+					<div className='cta'>
 						<AnchorLink href='#cta-form'>
-							<div class="form-btn" >
+							<div className="form-btn" onClick={this.handleClick.bind(this)}>
 								<p>LET'S CONNECT</p>
 							</div>
 						</AnchorLink>

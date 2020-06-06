@@ -38,7 +38,8 @@ export class Projects extends React.Component {
   				});
 				})
 			};
-		})
+		});
+		console.log('sort', sort)
 	}
 	render () {
 
