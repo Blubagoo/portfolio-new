@@ -21,7 +21,7 @@ export default class EightContentBubbles extends React.Component {
 					<a href="#"><p>Ad Rotator</p></a>
 				</div>
 				<div className='bubble'>
-					<h3>Mongoose(NoSQL)</h3>
+					<h3>Mongoose (NoSQL)</h3>
 					<a href="#"><p>FlowState( Schema )</p></a>
 					<a href="#"><p>Digital Achievements</p></a>
 					<a href='#'><p>DataUI</p></a>
