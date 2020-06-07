@@ -6,6 +6,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import './styles/header.css';
 
 const LOGO = require('./images/rune-vapor-wave-logo-square-transparent.png');
+const headerBG = require('./images/header-bg.png');
 
 export default class Header extends React.Component {
 	constructor(props) {
@@ -20,8 +21,8 @@ export default class Header extends React.Component {
 	}
 	render () {
 		return (
-			<div className='header' id='header-top' style={{backgroundColor: config.colorDark}}>
-				<div className='head-wrapper'>
+			<div className='header' id='header-top' style={{backgroundColor: config.colorDark,backgroundImage: `url(${headerBG})`}}>
+				<div className='head-wrapper' style={{}}>
 					<div className='slide-left'>
 						<Link to='/' className='img-wrapper'>
 							<img src={LOGO} alt={config.name} />

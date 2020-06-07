@@ -46,7 +46,7 @@ export default class ImageleftIntro extends React.Component {
 					</div>
 					<div className='info-wrapper'>
 						<h1>Jim Tisdale</h1>
-						<h2>Design. Develop. Have Fun.</h2>
+						<h2>Leader. Problem Solver. Lifelong Student.</h2>
 						<p>I'm a developer who can manage projects from start to finish, while picking up on bottlenecks
 						 such as graphic updates and simple content additions. I love to jump in and learn new things
 						 and this allows me to round out my skillset with valuable skills like photoshop, nDesign, 

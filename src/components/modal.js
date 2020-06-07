@@ -16,8 +16,8 @@ export const Modal = (props) => {
 
 					</div>
 				</div>
-				<div class='close-wrapper' onClick={() => props.dispatch(changeZIndex(-99))}>
-					<i class="far fa-times-circle"></i>
+				<div className='close-wrapper' onClick={() => props.dispatch(changeZIndex(-99))}>
+					<i className="far fa-times-circle"></i>
 				</div>
 			</div>
 			<AnchorLink href='#header-top' className='to-top-modal'>
