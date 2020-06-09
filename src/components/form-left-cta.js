@@ -14,13 +14,13 @@ export default class FormLeftCTA extends React.Component {
 			submitText: 'Submit',
 		}
 	}
-	handleSubmit(e) {
+	handleSubmit = async (e) => {
 		e.preventDefault();
 		console.log('submitting')
 		// let em = this.state.userEmail;
 		// let nm = this.state.userName;
 		// let ms = this.state.userMessage;
-		this.setState((state, props) => ({
+		await this.setState((state, props) => ({
 			isSending: true,
 		}));
 		console.log('props', this.state.isSending)
