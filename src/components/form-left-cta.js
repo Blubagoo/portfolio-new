@@ -23,6 +23,7 @@ export default class FormLeftCTA extends React.Component {
 		await this.setState((state, props) => ({
 			isSending: true,
 		}));
+		this.handleSubmitText();
 		console.log('props', this.state.isSending)
 		
 	}

@@ -44,10 +44,10 @@ export class Projects extends React.Component {
 	render() {
 		return (
 			<div className='project-wrapper'>
-				<DisplayBox config={this.props.workArray}
+				<DisplayBox config={this.state.workArray}
 					title={'Work Projects'}
 					filterBy={'work'} />
-				<DisplayBox config={this.props.homeArray}
+				<DisplayBox config={this.state.homeArray}
 					title={'Home Projects'}
 					filterBy={'home'} />
 			</div>
