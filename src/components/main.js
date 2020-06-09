@@ -42,7 +42,7 @@ export class Main extends React.Component {
 					console.log("after axios get", prj)
 					return this.setState((state, props) => {
 						return Object.assign({}, state, {
-							projectsj: prj
+							projects: prj
 						})
 					});
 			}
@@ -61,7 +61,7 @@ export class Main extends React.Component {
 				<Switch>
           <Route path="/about">
             <About workExperience={this.state.exp} 
-            	eductation={this.state.edu}/>
+            	education={this.state.edu}/>
           </Route>
           <Route path="/projects">
             <Projects projects={this.state.projects}/>

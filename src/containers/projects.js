@@ -15,11 +15,11 @@ export class Projects extends React.Component {
 		this.sortMachine();
 
 	}
-	sortMachine() {
+	sortMachine = async () => {
 		console.log('mounted');
 		let workArray = [];
 		let homeArray = []; 
-		let sort = this.props.projects.map(each=> {
+		let sort = await this.props.projects.map(each=> {
 			console.log('each', each)
 			if(each.projectType === 'work') {
 				console.log('each if', each)
@@ -39,15 +39,15 @@ export class Projects extends React.Component {
 				})
 			};
 		});
-		console.log('sort', sort)
+		console.log('sort', workArray, homeArray)
 	}
 	render() {
 		return (
 			<div className='project-wrapper'>
-				<DisplayBox config={this.props.projects}
+				<DisplayBox config={this.props.workArray}
 					title={'Work Projects'}
 					filterBy={'work'} />
-				<DisplayBox config={this.props.projects}
+				<DisplayBox config={this.props.homeArray}
 					title={'Home Projects'}
 					filterBy={'home'} />
 			</div>
