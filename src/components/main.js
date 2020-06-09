@@ -60,11 +60,11 @@ export class Main extends React.Component {
 			<div>
 				<Switch>
           <Route path="/about">
-            <About workExperience={this.state.exp.data} 
-            	education={this.state.edu.data}/>
+            <About workExperience={this.state.exp.data.entries} 
+            	education={this.state.edu.data.entries}/>
           </Route>
           <Route path="/projects">
-            <Projects projects={this.state.projects.data}/>
+            <Projects projects={this.state.projects.data.entries}/>
           </Route>
           <Route path="/">
             <Home />
