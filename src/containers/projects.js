@@ -24,18 +24,18 @@ export class Projects extends React.Component {
 			console.log('each', each)
 			if(each.projectType === 'work') {
 				console.log('each if', each)
-				workArray.push(each);
+				workArr.push(each);
 				return this.setState((state, props) => {
   				return Object.assign({}, state, {
-  					workArr
+  					workArray: workArr
   				});
 				})
 			} else {
 				console.log('each else', each)
-			 	homeArray.push(each);
+			 	homeArr.push(each);
 				return this.setState((state, props) => {
   				return Object.assign({}, state, {
-  					homeArr
+  					homeArray: homeArr
   				});
 				})
 			};
