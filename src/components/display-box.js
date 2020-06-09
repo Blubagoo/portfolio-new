@@ -16,6 +16,7 @@ export class DisplayBox extends React.Component {
 		this.props.dispatch(changeZIndex(10));
 	}
 	renderBox(obj,index) {
+		console.log('rendering box', obj, index)
 		let name = '';
 		let image = '';
 		if(obj.projectName) {
