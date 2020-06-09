@@ -51,9 +51,9 @@ export class Main extends React.Component {
 		}
 	}
 	componentDidMount() {
-		this.fetchData('https://blu-ink-innovation.herokuapp.com/api/projects', 'prj');
-		this.fetchData('https://blu-ink-innovation.herokuapp.com/api/education', 'edu');
-		this.fetchData('https://blu-ink-innovation.herokuapp.com/api/experience', 'exp');
+		this.fetchData('https://jim-server.herokuapp.com/api/projects', 'prj');
+		this.fetchData('https://jim-server.herokuapp.com/api/education', 'edu');
+		this.fetchData('https://jim-server.herokuapp.com/api/experience', 'exp');
 	}
 	render () {
 		return (
