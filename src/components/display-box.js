@@ -14,6 +14,7 @@ export class DisplayBox extends React.Component {
 	renderModal (project, ind) {
 		console.log('rendering a modal for project, ', project);
 		this.props.dispatch(changeZIndex(10));
+		this.props.dispatch(setData(project));
 	}
 	renderBox(obj,index) {
 		console.log('rendering box', obj, index)

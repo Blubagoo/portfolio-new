@@ -5,12 +5,7 @@ import './styles/repeater.css';
 export default class Repeater extends React.Component {
 	constructor(props) {
 		super(props);
-		console.log('this is the repeater props', props);
-		this.state = {
-			list: this.props.list,
-			title: this.props.config.title,
-			type: this.props.config.style
-		}
+		console.log('this is the repeater props', props)
 	}
 	listBullets(array) {
 		console.log('arrar on bullets', array)
@@ -21,7 +16,7 @@ export default class Repeater extends React.Component {
 		return bullets;
 	}
 	render() {
-		let map = this.state.list.map((each,index) => {
+		let map = this.props.list.map((each,index) => {
 			console.log('each', each)
 			let bullets;
 			if(this.state.title === 'Experience') {
@@ -30,10 +25,10 @@ export default class Repeater extends React.Component {
 
 			}
 			return (
-				<div className='listing' key={index} id={`${this.state.type}-${index}`}>
+				<div className='listing' key={index} id={`${this.props.type}-${index}`}>
 					<div className='name-wrapper'>
 						<h3>{each.company}</h3>
-						<em>({each.date.start} - {each.date.end})</em>
+						<em>({each.date[0].start} - {each.date[0].end})</em>
 					</div>
 					<p>{each.info}</p>
 					<ul>
@@ -43,9 +38,9 @@ export default class Repeater extends React.Component {
 			)
 		})
 		return (
-			<div className={`repeater ${this.state.type}`}>
+			<div className={`repeater ${this.props.type}`}>
 				<div className='title'>
-					<h2>{this.state.title}</h2>
+					<h2>{this.props.title}</h2>
 				</div>
 				<div className='description'>
 					{map}

@@ -12,6 +12,9 @@ export default class Container extends React.Component {
 	constructor(props) {
 		super(props);
 		console.log('this is the container props', props);
+		this.state = {
+			project: {},
+		}
 	}
 	render() {
 		console.log('rendering container');
@@ -20,8 +23,12 @@ export default class Container extends React.Component {
 				<Header />
 				<Main />
 				<Footer />
-				<Modal />
+				<Modal project={this.state.project} />
 			</div>
 		);
 	}
 }
+const mapStateToProps = (state) => ({
+	project: state.project
+})
+export default connect(mapStateToProps)(Container);

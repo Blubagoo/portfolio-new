@@ -1,4 +1,4 @@
-import { CHANGE_Z_INDEX } from "../actions";
+import { CHANGE_Z_INDEX , SET_DATA } from "../actions";
 
 const initialState = {
 	data: [],
@@ -14,6 +14,10 @@ export const appReducer = (state = initialState, action) => {
 			return Object.assign({}, state, {
 				zIndex: action.zIndex,
 			});
+		case SET_DATA:
+			return Object.assign({}, state, {
+				project: action.project
+			})
 		default:
 			return state;
 	}
