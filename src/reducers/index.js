@@ -4,6 +4,13 @@ const initialState = {
 	data: [],
 	view: "home",
 	zIndex: -99,
+	project: {
+				projectName: '',
+				projectURL: '',
+				projectImage: '#',
+				projectDescription: '',
+				projectType: ''
+			},
 }
 
 

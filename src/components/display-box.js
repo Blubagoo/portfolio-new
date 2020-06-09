@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { connect } from 'react-redux';
-import { changeZIndex } from '../actions';
+import { changeZIndex, setData } from '../actions';
 
 import './styles/display-box.css';
 

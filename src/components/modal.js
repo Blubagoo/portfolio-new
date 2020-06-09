@@ -7,20 +7,19 @@ import './styles/modal.css';
 
 export const Modal = (props) => {
 	console.log('modal props', props)
-
 	return (
 		<div className='modal'>
 			<div className='full-screen-modal' style={{zIndex: props.zIndex}}>
 				<div className='display-wrapper'>
 					<div className='img-wrapper'>
-						<img src={this.props.project.projectImage} alt={this.props.project.projectName} />
+						<img src={props.project.projectImage} alt={props.project.projectName} />
 					</div>
 					<div className='info-wrapper'>
-						<h3>{this.props.project.projectName}</h3>
-						<p>{this.props.project.projectDescription}</p>
+						<h3>{props.project.projectName}</h3>
+						<p>{props.project.projectDescription}</p>
 					</div>
 					<div className='link-wrapper'>
-						<a href={this.props.project.projectURL} rel='no-referrer no-follow' target='_blank'>Website</a>
+						<a href={props.project.projectURL} rel='no-referrer no-follow' target='_blank'>Website</a>
 					</div>
 				</div>
 				<div className='close-wrapper' onClick={() => props.dispatch(changeZIndex(-99))}>
@@ -35,6 +34,7 @@ export const Modal = (props) => {
 }
 const mapStateToProps = (state) => ({
 	zIndex: state.zIndex,
+	project: state.project
 })
 
 export default connect (mapStateToProps)(Modal)

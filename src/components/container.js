@@ -8,13 +8,10 @@ import Modal from './modal';
 import './styles/container.css';
 import BG from '../components/images/polygon-texture-white.jpg';
 
-export class Container extends React.Component {
+export default class Container extends React.Component {
 	constructor(props) {
 		super(props);
 		console.log('this is the container props', props);
-		this.state = {
-			project: {},
-		}
 	}
 	render() {
 		console.log('rendering container');
@@ -23,12 +20,8 @@ export class Container extends React.Component {
 				<Header />
 				<Main />
 				<Footer />
-				<Modal project={this.state.project} />
+				<Modal />
 			</div>
 		);
 	}
 }
-const mapStateToProps = (state) => ({
-	project: state.project
-})
-export default connect(mapStateToProps)(Container);
