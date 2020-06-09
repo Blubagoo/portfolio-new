@@ -26,7 +26,7 @@ export class Main extends React.Component {
 					console.log("after axios get", edu)
 					return this.setState((state, props) => {
 						return Object.assign({}, state, {
-							edu
+							edu: edu.data.entries
 						})
 					});
 				case 'exp':
@@ -34,7 +34,7 @@ export class Main extends React.Component {
 					console.log("after axios get", exp)
 					return this.setState((state, props) => {
 						return Object.assign({}, state, {
-							exp
+							exp: exp.data.entries
 						})
 					});
 				default:
@@ -42,7 +42,7 @@ export class Main extends React.Component {
 					console.log("after axios get", prj)
 					return this.setState((state, props) => {
 						return Object.assign({}, state, {
-							projects: prj
+							projects: prj.data.entries
 						})
 					});
 			}
