@@ -31,7 +31,7 @@ export class Main extends React.Component {
 					});
 				case 'exp':
 					let exp =  await axios.get(url);
-					console.log("after axios get", edu)
+					console.log("after axios get", exp)
 					return this.setState((state, props) => {
 						return Object.assign({}, state, {
 							exp
@@ -39,7 +39,7 @@ export class Main extends React.Component {
 					});
 				default:
 					let prj =  await axios.get(url);
-					console.log("after axios get", edu)
+					console.log("after axios get", prj)
 					return this.setState((state, props) => {
 						return Object.assign({}, state, {
 							projectsj: prj
