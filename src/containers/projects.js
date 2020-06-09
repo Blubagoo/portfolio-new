@@ -12,8 +12,9 @@ export class Projects extends React.Component {
 			workArray: [],
 			homeArray: [],
 		}
+	}
+	componentDidMount() {
 		this.sortMachine();
-
 	}
 	sortMachine = async () => {
 		console.log('mounted');
@@ -39,7 +40,7 @@ export class Projects extends React.Component {
 				})
 			};
 		});
-		console.log('sort', workArray, homeArray)
+		console.log('sort', workArray, homeArray, sort)
 	}
 	render() {
 		return (
