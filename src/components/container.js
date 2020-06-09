@@ -8,7 +8,7 @@ import Modal from './modal';
 import './styles/container.css';
 import BG from '../components/images/polygon-texture-white.jpg';
 
-export default class Container extends React.Component {
+export class Container extends React.Component {
 	constructor(props) {
 		super(props);
 		console.log('this is the container props', props);
