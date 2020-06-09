@@ -51,6 +51,7 @@ export default class FormLeftCTA extends React.Component {
 	handleSubmitText() {
 
 		if(this.state.isSending) {
+			console.log('inside if isSending')
 			let num = 0;
 			setInterval(() => {
 				if (num  === 0) {
@@ -77,6 +78,7 @@ export default class FormLeftCTA extends React.Component {
 				
 			}, 1000)
 		} else {
+			console.log('inside else isSending')
 			this.setState((state, props) => ({
 				
 			}));
