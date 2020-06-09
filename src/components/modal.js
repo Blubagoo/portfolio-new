@@ -20,7 +20,7 @@ export const Modal = (props) => {
 						<p>{this.props.project.projectDescription}</p>
 					</div>
 					<div className='link-wrapper'>
-						<a href="" rel='no-referrer no-follow' target='_blank'>Website</a>
+						<a href={this.props.project.projectURL} rel='no-referrer no-follow' target='_blank'>Website</a>
 					</div>
 				</div>
 				<div className='close-wrapper' onClick={() => props.dispatch(changeZIndex(-99))}>
