@@ -18,8 +18,8 @@ export class Projects extends React.Component {
 	}
 	sortMachine = async () => {
 		console.log('mounted');
-		let workArray = [];
-		let homeArray = []; 
+		let workArr = [];
+		let homeArr = []; 
 		let sort = await this.props.projects.map(each=> {
 			console.log('each', each)
 			if(each.projectType === 'work') {
@@ -27,7 +27,7 @@ export class Projects extends React.Component {
 				workArray.push(each);
 				return this.setState((state, props) => {
   				return Object.assign({}, state, {
-  					workArray
+  					workArr
   				});
 				})
 			} else {
@@ -35,7 +35,7 @@ export class Projects extends React.Component {
 			 	homeArray.push(each);
 				return this.setState((state, props) => {
   				return Object.assign({}, state, {
-  					homeArray
+  					homeArr
   				});
 				})
 			};
