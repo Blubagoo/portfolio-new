@@ -40,7 +40,6 @@ export class Projects extends React.Component {
 				})
 			};
 		});
-		console.log('sort', workArray, homeArray, sort)
 	}
 	render() {
 		return (
