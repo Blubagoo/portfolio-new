@@ -11,49 +11,21 @@ export default class FormLeftCTA extends React.Component {
 			userEmail: '',
 			userName: '',
 			userMessage: '',
+			isSending: false,
+			submitText: 'Submit',
 		}
 	}
 	handleSubmit(e) {
 		e.preventDefault();
 		console.log('submitting')
-				// async..await is not allowed in global scope, must use a wrapper
-				let em = this.state.userEmail;
-		  let nm = this.state.userName;
-		  let ms = this.state.userMessage;
-		async function main() {
-		  // Generate test SMTP service account from ethereal.email
-		  // Only needed if you don't have a real mail account for testing
-
-		  // create reusable transporter object using the default SMTP transport
-		  let transporter = nodemailer.createTransport({
-		    host: "smtp.ethereal.email",
-		    port: 2525,
-		    secure: false,
-		    auth: {
-		      user: 'jctisdale1988@gmail.com',
-		      pass: 'eLacJcT5Y3B2Fp',
-		    },
-		  });
-		  // send mail with defined transport object
-		  
-
-		  let info = await transporter.sendMail({
-		    from: 'webdev@jim-tisdale.com', // sender address
-		    to: `${em},webdev@jim-tisdale.com`, // list of receivers
-		    subject: "Thanks for reaching out.", // Subject line
-		    text: "Thank you for your submission I will reach out as soon as I can.", // plain text body
-		    html: ms, // html body
-		  });
-
-		  console.log("Message sent: %s", info.messageId);
-		  // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-
-		  // Preview only available when sending through an Ethereal account
-		  console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-		  // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-		}
-
-		main().catch(console.error);
+		// let em = this.state.userEmail;
+		// let nm = this.state.userName;
+		// let ms = this.state.userMessage;
+		this.setState((state, props) => ({
+			isSending: true,
+		}));
+		console.log('props', this.state.isSending)
+		
 	}
 	handleNameChange(e) {
 		console.log('name', e.currentTarget.value);
@@ -67,11 +39,48 @@ export default class FormLeftCTA extends React.Component {
 			userEmail: e.currentTarget.value,
 		});
 	}
-	handleMessagechange(e) {
-		console.log('messsage', e.currentTarget.value, this.state.userMessage);
-		this.setState({
-			userMessage: e.currentTarget.value,
+	handleMessageChange(e) {
+		console.log('message', e.currentTarget.value);
+		this.setState((state, props) => {
+			return Object.assign({}, state, {
+				userMessage: e.currentTarget.value,
+			});
 		});
+
+	}
+	handleSubmitText() {
+
+		if(this.state.isSending) {
+			let num = 0;
+			setInterval(() => {
+				if (num  === 0) {
+					this.setState((state, props) => ({
+						submitText: 'Sending'
+					}));
+					return num++;
+				} else if (num === 1) {
+					this.setState((state, props) => ({
+						submitText: 'Sending .'
+					}));
+					return num++;
+				} else if (num !== 2) {
+					this.setState((state, props) => ({
+						submitText: 'Sending ..'
+					}));
+					return num++;
+				} else {
+					this.setState((state, props) => ({
+						submitText: 'Sending ...'
+					}));
+					return num = 1;
+				}
+				
+			}, 1000)
+		} else {
+			this.setState((state, props) => ({
+				
+			}));
+		}
 	}
 	render() {
 		return (
@@ -83,8 +92,8 @@ export default class FormLeftCTA extends React.Component {
 							<legend>
 								<input type='text' id='cta-name' placeholder='Name' onChange={this.handleNameChange.bind(this)} />
 								<input type='email' id='cta-email' placeholder='Email' onChange={this.handleEmailChange.bind(this)} />
-								<textarea style={{rows: '5',}} defaultValue='Message' onChange={this.handleMessagechange.bind(this)} ></textarea>
-								<button tyep='submit'>SUBMIT</button>
+								<textarea style={{rows: '5',}} defaultValue='Message' onChange={this.handleMessageChange.bind(this)} ></textarea>
+								<button tyep='submit'>{this.state.submitText}</button>
 							</legend>
 						</form>
 					</fieldset>

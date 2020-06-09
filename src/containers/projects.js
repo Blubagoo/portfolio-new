@@ -9,17 +9,17 @@ export class Projects extends React.Component {
 		super(props);
 		console.log('this is the Projects props', props);
 		this.state = {
-			projects: this.props.projects,
-			workArray: this.props.workArray,
-			homeArray: this.props.homeArray,
+			workArray: [],
+			homeArray: [],
 		}
+		this.sortMachine();
 
 	}
-	componentDidMount() {
+	sortMachine() {
 		console.log('mounted');
 		let workArray = [];
 		let homeArray = []; 
-		let sort = this.state.projects.map(each=> {
+		let sort = this.props.projects.map(each=> {
 			console.log('each', each)
 			if(each.projectType === 'work') {
 				console.log('each if', each)
@@ -41,14 +41,13 @@ export class Projects extends React.Component {
 		});
 		console.log('sort', sort)
 	}
-	render () {
-
+	render() {
 		return (
 			<div className='project-wrapper'>
-				<DisplayBox config={this.state.workArray}
+				<DisplayBox config={this.props.projects}
 					title={'Work Projects'}
 					filterBy={'work'} />
-				<DisplayBox config={this.state.homeArray}
+				<DisplayBox config={this.state.projects}
 					title={'Home Projects'}
 					filterBy={'home'} />
 			</div>
@@ -56,10 +55,4 @@ export class Projects extends React.Component {
 	}
 }
 
-const mapStateToProps = state => ({
-	projects: state.projects,
-	workArray: state.workArray,
-	homeArray: state.homeArray,
-});
-
-export default connect(mapStateToProps)(Projects);
+export default connect()(Projects);

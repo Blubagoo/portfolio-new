@@ -11,7 +11,6 @@ const PORT = process.env.PORT || 3006;
 const app = express();
 
 app.use(express.static('./build'));
-
 app.get('/*', (req, res) => {
   const app = ReactDOMServer.renderToString(<App />);
 

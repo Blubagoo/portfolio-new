@@ -18,15 +18,10 @@ const layerBG = require('./images/kipo-image-bg.png');
 export default class ImageleftIntro extends React.Component {
 	constructor(props) {
 		super(props);
-		console.log('this is the image left intro props', props);
-	}
-	componentDidMount () {
-
 	}
 	render() {
 		return (
 			<div className='home-top'>
-
 				<div className='kipo-sect'>
 					<div className='img-wrapper'>
 						<img src={layerOne} alt='kipo age of the wonderbeasts fan art' style={{zIndex: '10', marginLeft: '200px'}} />
@@ -41,7 +36,7 @@ export default class ImageleftIntro extends React.Component {
 						<img src={layerTen} alt='kipo age of the wonderbeasts fan art'  style={{zIndex: '1', marginLeft: '60px'}} />
 						<img src={layerBG} alt='kipo age of the wonderbeasts fan art'  style={{zIndex: '0'}} />
 						<div className='text-area'>
-							<p>This slider was custom built. Feel free to check out the code <a target='_blank' href="https://github.com/Blubagoo/portfolio-new/blob/master/src/components/image-left-intro.js">here</a></p>
+							<p>This slider was custom built. Feel free to check out the code <a target='_blank' rel="noopener noreferrer" href="https://github.com/Blubagoo/portfolio-new/blob/master/src/components/image-left-intro.js">here</a></p>
 						</div>
 					</div>
 					<div className='info-wrapper'>

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { connect } from 'react-redux';
 
 import HeroSkillsRight from '../components/hero-skills-right';
@@ -11,10 +12,7 @@ export class About extends React.Component {
 	constructor( props ) {
 		super(props);
 		console.log('this is the About props', props);
-		this.state = {
-			experience: this.props.workExperience,
-			education: this.props.education
-		}
+		
 	}
 	render () {
 		return (
@@ -22,11 +20,11 @@ export class About extends React.Component {
 				<HeroSkillsRight />
 				<Repeater
 					config={{style: 'row', title: 'Experience'}}
-					list={this.state.experience}
+					list={this.props.workExperience}
 				/>
 				<Repeater
 					config={{style: 'row', title: 'Education',}}
-					list={this.state.education}
+					list={this.props.education}
 				/>
 			</div>
 		)
