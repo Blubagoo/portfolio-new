@@ -31,9 +31,4 @@ export class About extends React.Component {
 	}
 }
 
-const mapStateToProps = state => ({
-	education: state.education,
-	workExperience: state.workExperience,
-});
-
-export default connect(mapStateToProps)(About);
+export default connect()(About);
