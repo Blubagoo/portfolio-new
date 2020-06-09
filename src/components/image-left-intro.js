@@ -18,6 +18,7 @@ const layerBG = require('./images/kipo-image-bg.png');
 export default class ImageleftIntro extends React.Component {
 	constructor(props) {
 		super(props);
+		console.log("useless props", props)
 	}
 	render() {
 		return (

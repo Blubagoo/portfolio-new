@@ -22,41 +22,28 @@ export class Main extends React.Component {
 		try {
 			switch(type) {
 				case 'edu':
-					return await axios.get(url)
-					.then(data => {
-						this.setState((state, props) => {
-							return Object.assign({}, state, {
-								edu: data
-							})
-						});
-					})
-					.catch(err => {
-						console.log('error', err)
+					let edu =  await axios.get(url);
+					console.log("after axios get", edu)
+					return this.setState((state, props) => {
+						return Object.assign({}, state, {
+							edu
+						})
 					});
 				case 'exp':
-					return await axios.get(url)
-					.then(data => {
-						this.setState((state, props) => {
-							return Object.assign({}, state, {
-								exp: data
-							})
-						});
-					})
-					.catch(err => {
-						console.log('error', err)
+					let exp =  await axios.get(url);
+					console.log("after axios get", edu)
+					return this.setState((state, props) => {
+						return Object.assign({}, state, {
+							exp
+						})
 					});
 				default:
-					return await axios.get(url)
-					.then(data => {
-						console.log('data', data)
-						this.setState((state, props) => {
-							return Object.assign({}, state, {
-								exp: data
-							})
-						});
-					})
-					.catch(err => {
-						console.log('error', err)
+					let prj =  await axios.get(url);
+					console.log("after axios get", edu)
+					return this.setState((state, props) => {
+						return Object.assign({}, state, {
+							projectsj: prj
+						})
 					});
 			}
 		} catch {
@@ -64,9 +51,9 @@ export class Main extends React.Component {
 		}
 	}
 	componentDidMount() {
-		this.fetchData('https://www.jim-tisdale.com/api/projects', 'prj');
-		this.fetchData('https://www.jim-tisdale.com/api/education', 'edu');
-		this.fetchData('https://www.jim-tisdale.com/api/experience', 'pexp');
+		this.fetchData('https://blu-ink-innovation.herokuapp.com/api/projects', 'prj');
+		this.fetchData('https://blu-ink-innovation.herokuapp.com/api/education', 'edu');
+		this.fetchData('https://blu-ink-innovation.herokuapp.com/api/experience', 'exp');
 	}
 	render () {
 		return (

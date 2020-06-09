@@ -45,7 +45,7 @@ export class DisplayBox extends React.Component {
 				<div className='grad-hr' />
 				<div className='display-box'>
 					<div className='selection-wrapper'>
-						{this.projects.config.map((each,index) => this.renderBox(each,index))}
+						{this.props.config.map((each,index) => this.renderBox(each,index))}
 					</div>
 				</div>
 			</div>

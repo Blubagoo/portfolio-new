@@ -47,7 +47,7 @@ export class Projects extends React.Component {
 				<DisplayBox config={this.props.projects}
 					title={'Work Projects'}
 					filterBy={'work'} />
-				<DisplayBox config={this.state.projects}
+				<DisplayBox config={this.props.projects}
 					title={'Home Projects'}
 					filterBy={'home'} />
 			</div>

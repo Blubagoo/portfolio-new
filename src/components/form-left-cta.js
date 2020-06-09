@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import nodemailer from 'nodemailer';
 import './styles/form-left-cta.css';
 
 export default class FormLeftCTA extends React.Component {
