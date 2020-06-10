@@ -30,7 +30,9 @@ export default class FormLeftCTA extends React.Component {
 			email: em,
 			message: ms
 		})
-			.then((data) => console.log('data after mail post', data)).catch(err => console.log("error after mail", err))
+			.then((data) => this.setState((state, props) => ({
+				isSending: false,
+			}));).catch(err => console.log("error after mail", err))
 		console.log('props', this.state.isSending)
 		
 	}
