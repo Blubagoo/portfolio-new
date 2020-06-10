@@ -19,7 +19,7 @@ export default class Repeater extends React.Component {
 		let map = this.props.list.map((each,index) => {
 			console.log('each', each)
 			let bullets;
-			if(this.state.title === 'Experience') {
+			if(this.props.config.title === 'Experience') {
 				bullets = this.listBullets(each.bulletPoints);
 				console.log('bullets', bullets)
 
