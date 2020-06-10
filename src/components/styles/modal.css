@@ -31,16 +31,43 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 }
 .full-screen-modal .display-wrapper {
 	background: linear-gradient(135deg, #D25796, #8FADB5);
 	padding: 3px;
+	border-radius: 10px;
+	z-index: 9999;
+	max-width: 800px;
+}
+.full-screen-modal .img-wrapper {
+	width: 100%;
+}
+.full-screen-modal .img-wrapper img {
+	border-radius: 10px 10px 0 0;
+	width: 100%;
 }
 .full-screen-modal .display-wrapper h3,
 .full-screen-modal .display-wrapper p {
 	color: white;
 }
-
+.full-screen-modal .display-wrapper h3 {
+	font-size: 30px;
+	margin-bottom: 8px;
+}
+.full-screen-modal .link-wrapper a {
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+}
+.full-screen-modal .link-wrapper a i {
+	margin-left: 6px;
+	margin-bottom: -3px;
+}
+.full-screen-modal .info-wrapper,
+.full-screen-modal .link-wrapper {
+	padding: 30px;
+}
 .close-wrapper {
 	position: fixed;
 	top: 0;

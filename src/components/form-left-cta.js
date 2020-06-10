@@ -36,6 +36,7 @@ export default class FormLeftCTA extends React.Component {
 					submitText: 'Submit'
 				}));
 				await this.handleSubmitText();
+			})
 			.catch(err => console.log("error after mail", err))
 				console.log('props', this.state.isSending);
 		
