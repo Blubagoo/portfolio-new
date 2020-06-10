@@ -64,7 +64,7 @@ export default class FormLeftCTA extends React.Component {
 						submitText: 'Sending .'
 					}));
 					return num++;
-				} else if (num !== 2) {
+				} else if (num === 2) {
 					this.setState((state, props) => ({
 						submitText: 'Sending ..'
 					}));
@@ -95,7 +95,7 @@ export default class FormLeftCTA extends React.Component {
 								<input type='text' id='cta-name' placeholder='Name' onChange={this.handleNameChange.bind(this)} />
 								<input type='email' id='cta-email' placeholder='Email' onChange={this.handleEmailChange.bind(this)} />
 								<textarea style={{rows: '5',}} defaultValue='Message' onChange={this.handleMessageChange.bind(this)} ></textarea>
-								<button tyep='submit'>{this.state.submitText}</button>
+								<button type='submit'>{this.state.submitText}</button>
 							</legend>
 						</form>
 					</fieldset>
