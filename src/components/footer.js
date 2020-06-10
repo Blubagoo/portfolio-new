@@ -38,9 +38,9 @@ export default class Footer extends React.Component {
 							<a href='https://github.com/Blubagoo' rel="noopener noreferrer" target='_blank' className='icon github'>
 								<i className="fab fa-github"></i>
 							</a>
-							<div className='icon resume'>
+							<a href='https://oneopinion.me/wp-content/uploads/2020/06/Jim-Tisdale-1.pdf' className='icon resume'>
 								<i className="fas fa-file-download"></i>
-							</div>
+							</a> 
 							<a href='https://www.linkedin.com/in/jim-tisdale/' rel="noopener noreferrer" target='_blank' className='icon linkedin'>
 								<i className="fab fa-linkedin-in"></i>
 							</a>
