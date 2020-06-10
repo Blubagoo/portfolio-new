@@ -63,38 +63,21 @@ export default class FormLeftCTA extends React.Component {
 
 	}
 	handleSubmitText() {
-
+		let interv;
 		if(this.state.isSending) {
 			console.log('inside if isSending')
-			let num = 0;
-			setInterval(() => {
-				if (num  === 0) {
-					this.setState((state, props) => ({
-						submitText: 'Sending'
-					}));
-					return num++;
-				} else if (num === 1) {
-					this.setState((state, props) => ({
-						submitText: 'Sending .'
-					}));
-					return num++;
-				} else if (num === 2) {
-					this.setState((state, props) => ({
-						submitText: 'Sending ..'
-					}));
-					return num++;
-				} else {
-					this.setState((state, props) => ({
-						submitText: 'Sending ...'
-					}));
-					return num = 1;
-				}
-				
-			}, 1000)
-		} else {
-			console.log('inside else isSending')
 			this.setState((state, props) => ({
-				
+				submitText: 'Sending'
+			}));
+		} else {
+			clearInterval(interv);
+			setTimeout(() => {
+				this.setState((state, props) => ({
+					submitText: 'Submit'
+				}));
+			}, 2000);
+			return this.setState((state, props) => ({
+				submitText: 'Sent'
 			}));
 		}
 	}
