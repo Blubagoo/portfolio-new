@@ -25,7 +25,7 @@ export default class Repeater extends React.Component {
 
 			}
 			return (
-				<div className='listing' key={index} id={`${this.props.type}-${index}`}>
+				<div className='listing' key={index} id={`${this.props.config.type}-${index}`}>
 					<div className='name-wrapper'>
 						<h3>{each.company}</h3>
 						<em>({each.date[0].start} - {each.date[0].end})</em>
