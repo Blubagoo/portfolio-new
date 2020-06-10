@@ -44,6 +44,9 @@ export default class Footer extends React.Component {
 							<a href='https://www.linkedin.com/in/jim-tisdale/' rel="noopener noreferrer" target='_blank' className='icon linkedin'>
 								<i className="fab fa-linkedin-in"></i>
 							</a>
+							<a href='https://soundcloud.com/blubagoo' rel="noopener noreferrer" target='_blank' className='icon linkedin'>
+								<i className="fab fa-soundcloud"></i>
+							</a>
 						</div>
 					</div>
 					<div className='sect-right'>
