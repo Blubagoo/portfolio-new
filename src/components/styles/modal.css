@@ -32,6 +32,15 @@
 	flex-direction: column;
 	align-items: center;
 }
+.full-screen-modal .display-wrapper {
+	background: linear-gradient(135deg, #D25796, #8FADB5);
+	padding: 3px;
+}
+.full-screen-modal .display-wrapper h3,
+.full-screen-modal .display-wrapper p {
+	color: white;
+}
+
 .close-wrapper {
 	position: fixed;
 	top: 0;
