@@ -17,13 +17,19 @@ export default class FormLeftCTA extends React.Component {
 	handleSubmit = async (e) => {
 		e.preventDefault();
 		console.log('submitting')
-		// let em = this.state.userEmail;
-		// let nm = this.state.userName;
-		// let ms = this.state.userMessage;
+		let em = this.state.userEmail;
+		let nm = this.state.userName;
+		let ms = this.state.userMessage;
 		await this.setState((state, props) => ({
 			isSending: true,
 		}));
 		this.handleSubmitText();
+		let request = await axios.post('https://jim-server.herokuapp.com/api/nodemail/newMail', {
+			name: nm,
+			email: em,
+			message: ms
+		})
+			.then((data) => console.log('data after mail post', data)).catch(err => console.log("error after mail", err))
 		console.log('props', this.state.isSending)
 		
 	}
