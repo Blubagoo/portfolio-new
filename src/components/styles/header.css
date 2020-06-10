@@ -120,12 +120,18 @@
 .slide-left {
 	display: flex;
 }
-@media only screen and (max-width: 1275px) {
+@media only screen and (max-width: 1440px) {
 	.head-wrapper {
 		padding: 20px 60px;
+		margin: 0;
 	}
 }
-@media only screen and (max-width: 715px) {
+@media only screen and (max-width: 1024px) {
+	.head-wrapper {
+		padding: 0;
+	}
+}
+@media only screen and (max-width: 728px) {
 	.head-wrapper {
 		padding: 20px;
 		padding-bottom: 40px;
@@ -141,7 +147,7 @@
 		margin-right: 16px;
 	}
 }
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 480px) {
 	.nav-item a {
 		font-size: 20px;
 	}

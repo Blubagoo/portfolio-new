@@ -13,6 +13,7 @@ export default class FormLeftCTA extends React.Component {
 			userMessage: '',
 			isSending: false,
 			submitText: 'Submit',
+			formTitle: 'Contact Jim'
 		}
 	}
 	handleSubmit = async (e) => {
@@ -22,7 +23,7 @@ export default class FormLeftCTA extends React.Component {
 		let nm = this.state.userName;
 		let ms = this.state.userMessage;
 		await this.setState((state, props) => ({
-			isSending: true,
+			isSending: true
 		}));
 		this.handleSubmitText();
 		let request = await axios.post('https://jim-server.herokuapp.com/api/nodemail/newMail', {
@@ -31,10 +32,16 @@ export default class FormLeftCTA extends React.Component {
 			message: ms
 		})
 			.then(async (data) => {
+				console.log("async then")
 				await this.setState((state, props) => ({
 					isSending: false,
-					submitText: 'Submit'
+					submitText: 'Submit',
+					userEmail: '',
+					userMessage: '',
+					userName: '',
+					formTitle: 'Thank You!'
 				}));
+				await console.log('after async set state', this.state)
 				await this.handleSubmitText();
 			})
 			.catch(err => console.log("error after mail", err))
@@ -54,10 +61,11 @@ export default class FormLeftCTA extends React.Component {
 		});
 	}
 	handleMessageChange(e) {
-		console.log('message', e.currentTarget.value);
+		let value = e.currentTarget.value;
+		console.log('message', value);
 		this.setState((state, props) => {
 			return Object.assign({}, state, {
-				userMessage: e.currentTarget.value,
+				userMessage: value,
 			});
 		});
 
@@ -73,7 +81,8 @@ export default class FormLeftCTA extends React.Component {
 			clearInterval(interv);
 			setTimeout(() => {
 				this.setState((state, props) => ({
-					submitText: 'Submit'
+					submitText: 'Submit',
+					formTitle: 'Contact Jim'
 				}));
 			}, 2000);
 			return this.setState((state, props) => ({
@@ -85,13 +94,13 @@ export default class FormLeftCTA extends React.Component {
 		return (
 			<div className='form-left'>
 				<div className='form-wrapper' id="cta-form">
-					<h2>Contact Me</h2>
+					<h2>{this.state.formTitle}</h2>
 					<fieldset>
 						<form onSubmit={this.handleSubmit.bind(this)}>
 							<legend>
-								<input type='text' id='cta-name' placeholder='Name' onChange={this.handleNameChange.bind(this)} />
-								<input type='email' id='cta-email' placeholder='Email' onChange={this.handleEmailChange.bind(this)} />
-								<textarea style={{rows: '5',}} defaultValue='Message' onChange={this.handleMessageChange.bind(this)} ></textarea>
+								<input type='text' id='cta-name' placeholder='Name' onChange={this.handleNameChange.bind(this)} value={this.state.userName}/>
+								<input type='email' id='cta-email' placeholder='Email' onChange={this.handleEmailChange.bind(this)}  value={this.state.userEmail}/>
+								<textarea style={{rows: '5',}} placeholder='Message' onChange={this.handleMessageChange.bind(this)}  value={this.state.userMessage}>{this.state.userMessage}</textarea>
 								<button type='submit'>{this.state.submitText}</button>
 							</legend>
 						</form>

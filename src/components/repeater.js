@@ -40,7 +40,7 @@ export default class Repeater extends React.Component {
 		return (
 			<div className={`repeater ${this.props.type}`}>
 				<div className='title'>
-					<h2>{this.props.title}</h2>
+					<h2>{this.props.config.title}</h2>
 				</div>
 				<div className='description'>
 					{map}
