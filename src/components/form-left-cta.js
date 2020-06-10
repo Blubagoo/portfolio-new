@@ -30,11 +30,14 @@ export default class FormLeftCTA extends React.Component {
 			email: em,
 			message: ms
 		})
-			.then((data) => this.setState((state, props) => ({
-				isSending: false,
-				submitText: 'Submit'
-			}))).catch(err => console.log("error after mail", err))
-		console.log('props', this.state.isSending)
+			.then(async (data) => {
+				await this.setState((state, props) => ({
+					isSending: false,
+					submitText: 'Submit'
+				}));
+				await this.handleSubmitText();
+			.catch(err => console.log("error after mail", err))
+				console.log('props', this.state.isSending);
 		
 	}
 	handleNameChange(e) {
