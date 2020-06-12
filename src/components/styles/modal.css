@@ -1,3 +1,6 @@
+.modal {
+	max-width: 100%;
+}
 .to-top-modal {
 	position: fixed;
 	bottom: 50px;
@@ -8,6 +11,7 @@
 	animation: slideLeftOffScreen 3s 1;
 	border-radius: 70px;
 	box-shadow: 0 8px 30px -5px rgba(106,22,59,.4);
+	z-index: 9999;
 }
 .to-top-modal:hover {
 	cursor: pointer;
@@ -42,6 +46,8 @@
 }
 .full-screen-modal .img-wrapper {
 	width: 100%;
+	height: 400px;
+	overflow: hidden;
 }
 .full-screen-modal .img-wrapper img {
 	border-radius: 10px 10px 0 0;
@@ -81,4 +87,24 @@
 .close-wrapper i {
 	color: white;
 	font-size: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+	.full-screen-modal .display-wrapper {
+		background: linear-gradient(135deg, #D25796, #8FADB5);
+		padding: 3px;
+		border-radius: 10px;
+		z-index: 9999;
+		max-width: 400px;
+	}
+	.full-screen-modal .img-wrapper {
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+	}
+	.full-screen-modal .display-wrapper h3 {
+		font-size: 36px;
+		line-height: .8;
+		margin-bottom: 16px;
+	}
 }

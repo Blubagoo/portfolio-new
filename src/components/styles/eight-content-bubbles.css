@@ -26,6 +26,17 @@
 	padding-top: 50px;
 	padding-bottom: 70px;
 }
+@media only screen and (max-width: 834px) {
+	.bubble h3 {
+		font-size: 28px;
+		padding-bottom: 10px;
+	}
+	.bubble {
+		width: 48%;
+		padding: 0;
+		margin: 5px;
+	}
+}
 @media only screen and (max-width: 768px) {
 	.eight-bubbles {
 		padding: 0;
@@ -33,7 +44,7 @@
 		margin-top: -70px;
 	}
 	.bubble {
-		width: 30%;
+		width: 48%;
 		margin: 20px auto;
 	}
 }

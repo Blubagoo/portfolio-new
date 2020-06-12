@@ -56,11 +56,15 @@
 	align-items: center;
 	background-color: #000;
 }
-
+@media only screen and (max-width: 834px) {
+	.three-box-section .box {
+		margin: -100px 5px 0px 5px;
+	}
+}
 @media only screen and (max-width: 768px) {
 	.three-box-section .box {
-		width: 100%;
-		margin: -100px 20px 110px 20px;
+		width: 80%;
+		margin: -100px 20px 120px 20px;
 	}
 	.three-box-section {
 		flex-wrap: wrap;

@@ -12,17 +12,30 @@ export default class Header extends React.Component {
 	constructor(props) {
 		super(props);
 		console.log('this is the header props', props);
+		this.state = {
+			iconClass: 'icon-showing',
+			menuClass: 'icon-hiding collapsed'
+		}
 	}
 	handleClick() {
 		if (window.location.pathname !== '/') {
 			window.location = '/#cta-form';
 		}
-		
+	}
+	handleMobileMenu = async (icon,menu) => {
+		console.log('inside handle mobile before');
+		this.setState((state,props) => {
+			return Object.assign({}, state,{
+				iconClass: icon,
+				menuClass: menu
+			})
+		})
+		console.log('inside handle mobile after', this.state);
 	}
 	render () {
 		return (
 			<div className='header' id='header-top' style={{backgroundColor: config.colorDark,backgroundImage: `url(${headerBG})`}}>
-				<div className='head-wrapper' style={{}}>
+				<div className='head-wrapper lg-screen' style={{}}>
 					<div className='slide-left'>
 						<Link to='/' className='img-wrapper'>
 							<img src={LOGO} alt={config.name} />
@@ -45,6 +58,35 @@ export default class Header extends React.Component {
 								<p>LET'S CONNECT</p>
 							</div>
 						</AnchorLink>
+					</div>
+				</div>
+				<div className='head-wrapper sm-screen'>
+					<Link to='/' className='img-wrapper'>
+						<img src={LOGO} alt={config.name} />
+					</Link>
+					<div className='hamburger-menu'>
+						<div className='ham-icon'  onClick={() => {
+							this.handleMobileMenu('icon-hiding', 'icon-showing expanded')
+						}}>
+							<i className={`fas fa-bars ${this.state.iconClass}`}></i>
+						</div>
+						<div className={`mobile-menu ${this.state.menuClass}`}>
+						  <div className={`close-icon ${this.state.menuClass}`}  onClick={() => {
+						  	console.log('onclick close')
+								this.handleMobileMenu('icon-showing', 'icon-hiding collapsed')
+							}}>
+								<i className="far fa-times-circle"></i>
+							</div>
+							<Link to="/" className={`nav-item ${this.state.menuClass}`}>
+								<p style={{color:config.colorPrimary}}>Home</p>
+							</Link>
+							<Link to='/projects' className={`nav-item ${this.state.menuClass}`}>
+								<p style={{color:config.colorPrimary}}>Projects</p>
+							</Link>
+							<Link to='/about' className={`nav-item ${this.state.menuClass}`}>
+								<p style={{color:config.colorPrimary}}>Bio</p>
+							</Link>
+						</div>
 					</div>
 				</div>
 				<div className='hr-bar'>

@@ -1,9 +1,12 @@
 .project-wrapper {
-	width: 13300px;
 	max-width: 1300px;
 	margin: 60px auto;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-
+@media only screen and (max-width: 1024px) {
+	.project-wrapper {
+		margin: 20px 0;
+	}
+}
