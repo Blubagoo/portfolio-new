@@ -58,6 +58,8 @@
 .form-left .cta-wrapper p {
 	max-width: 500px;
 	text-decoration: none;
+	margin: 0;
+		padding: 0;
 }
 .form-left .cta-wrapper a {
 	text-decoration: none;
@@ -172,8 +174,6 @@
 		flex-direction: column;
 	}
 	.form-left .cta-wrapper p {
-		margin: 0;
-		padding: 0;
 		font-size: 16px;
 	}
 	.btn {
