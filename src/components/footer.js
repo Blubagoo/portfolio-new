@@ -19,7 +19,7 @@ export default class Footer extends React.Component {
 						<div className='info-wrapper'>
 							<h4>Jim Tisdale</h4>
 							<p>Dothan, AL</p>
-							<p>(334)258-3741</p>
+							<a href="tel:3342583741"<p>(334)258-3741</p></a>
 						</div>
 					</div>
 					<div className="sect-middle">
