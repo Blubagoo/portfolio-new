@@ -44,6 +44,8 @@ export class Projects extends React.Component {
 	render() {
 		return (
 			<div className='project-wrapper'>
+				<h1>Dive right in.</h1>
+				<p>This is a look at some of the projects I have been responsible for either the majority or all of the development.</p>
 				<DisplayBox config={this.state.workArray}
 					title={'Work Projects'}
 					filterBy={'work'} />
