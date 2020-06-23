@@ -43,7 +43,7 @@ export class DisplayBox extends React.Component {
 	render() { 
 		return (
 			<div className='display-box-wrapper'>
-				<h1>{this.props.title}</h1>
+				<h2>{this.props.title}</h2>
 				<div className='grad-hr' />
 				<div className='display-box'>
 					<div className='selection-wrapper'>

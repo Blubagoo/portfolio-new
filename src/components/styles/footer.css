@@ -26,6 +26,9 @@
 }
 .footer .sect-middle {
 	flex: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 .footer .sect-right {
 	flex: 1;
@@ -51,15 +54,16 @@
 }
 .footer .sect-middle .top-menu {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	margin-top: 20px;
 }
 .footer .sect-middle .top-menu a {
 	text-decoration: none;
+	margin: 0 20px;
 }
 .footer .sect-middle .top-menu .menu-item p {
 	color: white;
-	font-size: 20px;
+	font-size: 40px;
 	opacity: .7;
 	transition: all .3s ease;
 }
@@ -71,7 +75,6 @@
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
-	height: 70%;
 }
 .footer .sect-middle .social-icons .icon {
 	margin: 8px;
