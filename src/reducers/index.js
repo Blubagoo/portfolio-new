@@ -1,16 +1,18 @@
-import { CHANGE_Z_INDEX , SET_DATA } from "../actions";
+import { CHANGE_Z_INDEX , SET_DATA , SET_HEADER_VIEW, SET_FIRST_PAGE_LOAD } from "../actions";
 
 const initialState = {
 	data: [],
 	view: "home",
 	zIndex: -99,
 	project: {
-				projectName: '',
-				projectURL: '',
-				projectImage: '#',
-				projectDescription: '',
-				projectType: ''
-			},
+		projectName: '',
+		projectURL: '',
+		projectImage: '#',
+		projectDescription: '',
+		projectType: ''
+	},
+	headerView: true,
+	firstTimeLoading: true,
 }
 
 
@@ -24,6 +26,14 @@ export const appReducer = (state = initialState, action) => {
 		case SET_DATA:
 			return Object.assign({}, state, {
 				project: action.project
+			});
+		case SET_HEADER_VIEW:
+			return Object.assign({}, state, {
+				headerView: action.headerView
+			});
+		case SET_FIRST_PAGE_LOAD:
+			return Object.assign({}, state, {
+				isFirstPageLoad: action.isFirstPageLoad
 			})
 		default:
 			return state;

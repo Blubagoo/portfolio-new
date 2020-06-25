@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import Header from './header';
 import Main from './main';
@@ -8,7 +9,7 @@ import Modal from './modal';
 import './styles/container.css';
 import BG from '../components/images/polygon-texture-white.jpg';
 
-export default class Container extends React.Component {
+export class Container extends React.Component {
 	constructor(props) {
 		super(props);
 		console.log('this is the container props', props);
@@ -20,8 +21,14 @@ export default class Container extends React.Component {
 				<Header />
 				<Main />
 				<Footer />
-				<Modal />
+				<Modal isInView={this.props.headerView}
+					firstTimeLoading={this.props.isFirstTimeLoading}/>
 			</div>
 		);
 	}
 }
+const mapStateToProps = (state) => ({
+	headerView: state.headerView,
+	isFirstTimeLoading: state.firstTimeLoading
+})
+export default connect (mapStateToProps)(Container);

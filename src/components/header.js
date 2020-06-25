@@ -1,14 +1,17 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import config from './config';
 import { Link } from 'react-router-dom';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import VizSensor from 'react-visibility-sensor';
+import { setHeaderView } from '../actions'
 
 import './styles/header.css';
 
 const LOGO = require('./images/rune-vapor-wave-logo-square-transparent.png');
 const headerBG = require('./images/header-bg.png');
 
-export default class Header extends React.Component {
+export class Header extends React.Component {
 	constructor(props) {
 		super(props);
 		console.log('this is the header props', props);
@@ -37,9 +40,19 @@ export default class Header extends React.Component {
 			<div className='header' id='header-top' style={{backgroundColor: config.colorDark,backgroundImage: `url(${headerBG})`}}>
 				<div className='head-wrapper lg-screen' style={{}}>
 					<div className='slide-left'>
-						<Link to='/' className='img-wrapper'>
-							<img src={LOGO} alt={config.name} />
-						</Link>
+					  <VizSensor
+			        onChange={(isVisible) => {
+			          if(isVisible === true) {
+			          	this.props.dispatch(setHeaderView('scroll-showing'));
+			          } else {
+			          	this.props.dispatch(setHeaderView('scroll-hiding'));
+			          }
+			        }}
+			      >
+							<Link to='/' className='img-wrapper'>
+								<img src={LOGO} alt={config.name} />
+							</Link>
+						</VizSensor>
 						<div className='nav-bar'>
 							<div className='nav-item'>
 								<Link to="/" style={{color:config.colorPrimary}}>Home</Link>
@@ -96,3 +109,4 @@ export default class Header extends React.Component {
 		)
 	}
 }
+export default connect ()(Header);
