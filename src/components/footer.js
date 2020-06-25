@@ -18,7 +18,7 @@ export default class Footer extends React.Component {
 						<img src={photo} alt='Jim Tisdale' />
 						<div className='info-wrapper'>
 							<h4>Jim Tisdale</h4>
-							<a href="https://goo.gl/maps/1AZHHKSdHK2d1o9Q8" target="_blank"><p>Dothan, AL</p></a>
+							<a href="https://goo.gl/maps/1AZHHKSdHK2d1o9Q8" target="_blank" rel="noopener noreferrer"><p>Dothan, AL</p></a>
 							<a href="tel:3342583741"><p>(334)258-3741</p></a>
 						</div>
 					</div>
@@ -38,7 +38,7 @@ export default class Footer extends React.Component {
 							<a href='https://github.com/Blubagoo' rel="noopener noreferrer" target='_blank' className='icon github'>
 								<i className="fab fa-github"></i>
 							</a>
-							<a href='https://oneopinion.me/wp-content/uploads/2020/06/Jim-Tisdale-1.pdf' className='icon resume' target="_blank">
+							<a href='https://oneopinion.me/wp-content/uploads/2020/06/Jim-Tisdale-1.pdf' className='icon resume' target="_blank" rel="noopener noreferrer">
 								<i className="fas fa-file-download"></i>
 							</a> 
 							<a href='https://www.linkedin.com/in/jim-tisdale/' rel="noopener noreferrer" target='_blank' className='icon linkedin'>

@@ -18,5 +18,5 @@ export const setHeaderView = (elClass) => ({
 export const SET_FIRST_PAGE_LOAD = 'SET_FIRST_PAGE_LOAD';
 export const setFirstPageLoad = (boolean) => ({
 	type: SET_FIRST_PAGE_LOAD,
-  isFirstPageLoad: boolean
+  firstTimeLoad: boolean
 });

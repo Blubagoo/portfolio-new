@@ -11,13 +11,13 @@ const initialState = {
 		projectDescription: '',
 		projectType: ''
 	},
-	headerView: true,
-	firstTimeLoading: true,
+	headerView: ' scroll-showing',
+	firstTimeLoad: true,
 }
 
 
 export const appReducer = (state = initialState, action) => {
-	console.log("reducing this action type", action.type, state);
+	console.log("reducing this action type", action.type, action);
 	switch(action.type) {
 		case CHANGE_Z_INDEX:
 			return Object.assign({}, state, {
@@ -33,7 +33,7 @@ export const appReducer = (state = initialState, action) => {
 			});
 		case SET_FIRST_PAGE_LOAD:
 			return Object.assign({}, state, {
-				isFirstPageLoad: action.isFirstPageLoad
+				firstTimeLoad: action.firstTimeLoad
 			})
 		default:
 			return state;

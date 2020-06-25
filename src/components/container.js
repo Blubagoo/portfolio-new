@@ -22,13 +22,13 @@ export class Container extends React.Component {
 				<Main />
 				<Footer />
 				<Modal isInView={this.props.headerView}
-					firstTimeLoading={this.props.isFirstTimeLoading}/>
+					firstTimeLoad={this.props.firstTimeLoad}/>
 			</div>
 		);
 	}
 }
 const mapStateToProps = (state) => ({
 	headerView: state.headerView,
-	isFirstTimeLoading: state.firstTimeLoading
+	firstTimeLoad: state.firstTimeLoad
 })
 export default connect (mapStateToProps)(Container);

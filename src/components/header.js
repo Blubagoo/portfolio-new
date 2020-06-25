@@ -4,7 +4,7 @@ import config from './config';
 import { Link } from 'react-router-dom';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import VizSensor from 'react-visibility-sensor';
-import { setHeaderView } from '../actions'
+import { setHeaderView, setFirstPageLoad } from '../actions'
 
 import './styles/header.css';
 
@@ -42,10 +42,13 @@ export class Header extends React.Component {
 					<div className='slide-left'>
 					  <VizSensor
 			        onChange={(isVisible) => {
-			          if(isVisible === true) {
-			          	this.props.dispatch(setHeaderView('scroll-showing'));
+			          if(isVisible) {
+			          	console.log('visible')
+			          	this.props.dispatch(setHeaderView(' scroll-showing'));
 			          } else {
-			          	this.props.dispatch(setHeaderView('scroll-hiding'));
+			          	console.log('not visible')
+			          	this.props.dispatch(setFirstPageLoad(false))
+			          	this.props.dispatch(setHeaderView(' scroll-hiding'));
 			          }
 			        }}
 			      >
