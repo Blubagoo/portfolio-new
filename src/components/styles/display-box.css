@@ -26,7 +26,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background: linear-gradient(135deg, #D25796, #8FADB5);
+	background: linear-gradient(#E86CB1,94%,#792855);
 	border-radius: 10px;
 }
 .single-box .img-wrapper {
@@ -38,9 +38,9 @@
 }
 .single-box:hover {
 	cursor: pointer;
-	-moz-box-shadow: rgba(106,22,59,.4);
-   -webkit-box-shadow: rgba(106,22,59,.4);
-   box-shadow: 0 8px 30px -5px rgba(106,22,59,.4);
+	-moz-box-shadow: rgba(106,22,59,.3);
+   -webkit-box-shadow: rgba(106,22,59,.3);
+   box-shadow: 0 8px 30px -5px rgba(106,22,59,.3);
 }
 .single-box .img-wrapper img {
 	height: 100%;

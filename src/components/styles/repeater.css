@@ -18,7 +18,7 @@
 	box-shadow: 0 8px 10px -8px rgba(119,4,68, .4);
 }
 .listing {
-	background: linear-gradient(135deg, #D25796, #8FADB5);
+	background: linear-gradient(#E86CB1,75%,#792855);
 }
 .listing h3, .listing p, .listing em, .listing ul,.listing li {color: white;}
 .listing h3 {

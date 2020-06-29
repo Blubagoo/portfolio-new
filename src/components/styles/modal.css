@@ -13,14 +13,6 @@
 	box-shadow: 0 8px 30px -5px rgba(106,22,59,.4);
 	z-index: 9999;
 }
-.modal-showing {
-	animation: slideLeftOffScreen 3s 1;
-	margin-right: 0;
-}
-.modal-hiding {
-	animation: slideRightOffScreen 3s 1;
-	margin-right: -200px;
-}
 .to-top-modal:hover {
 	cursor: pointer;
 }
@@ -50,7 +42,7 @@
 	justify-content: center;
 }
 .full-screen-modal .display-wrapper {
-	background: linear-gradient(135deg, #D25796, #8FADB5);
+	background: linear-gradient(#E86CB1,94%,#792855);
 	padding: 3px;
 	border-radius: 10px;
 	z-index: 9999;
@@ -104,13 +96,14 @@
 .modal .hint-wrapper {
 	position: fixed;
 	bottom: 0;
-	padding: 30px;
+	padding: 60px 0 10px 0;
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: linear-gradient(rgba(0,0,0,.00),rgba(0,0,0,.5));
+	background: linear-gradient(rgba(0,0,0,.00),rgba(0,0,0,.8));
 	transition: all 1s ease;
+	z-index: 999;
 }
 .modal .scroll-showing {
 	margin-bottom: 0;
@@ -122,6 +115,14 @@
 	color: white;
 	animation: flashColor 2s infinite;
 	animation-delay: 5s;
+}
+.modal-showing {
+	animation: slideLeftOffScreen 3s 1;
+	margin-right: 0;
+}
+.modal-hiding {
+	animation: slideRightOffScreen 3s 1;
+	margin-right: -200px;
 }
 @keyframes flashColor {
 	0% {color: white;}

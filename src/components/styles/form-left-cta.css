@@ -12,11 +12,13 @@
 	height: 80px;
 	padding: 8px;
 	border-radius: 10px;
+	border: none;
 }
 .form-left legend input {
 	height: 20px;
 	padding: 8px;
 	border-radius: 10px;
+	border:none;
 }
 .form-left h3 {
 	color: white;
@@ -32,7 +34,7 @@
 .form-left .form-wrapper {
 	flex: 1;
 	padding: 80px 30px;
-	background-image: url('../images/texture-pink-squared-alt.png');
+	background: linear-gradient(#E86CB1,#792855);
 	border-radius: 15px;
 	max-width: 400px;
 }
@@ -65,11 +67,12 @@
 	text-decoration: none;
 }
 .form-left .form-wrapper button {
-	color: #792855;
 	font-weight: 800;
 	padding: 10px;
 	transition: all .3s ease;
 	border-radius: 10px;
+	border: none;
+	width: 100%;
 }
 .form-left .form-wrapper button:hover {
 	background: transparent;

@@ -101,7 +101,9 @@ export default class FormLeftCTA extends React.Component {
 								<input type='text' id='cta-name' placeholder='Name' onChange={this.handleNameChange.bind(this)} value={this.state.userName}/>
 								<input type='email' id='cta-email' placeholder='Email' onChange={this.handleEmailChange.bind(this)}  value={this.state.userEmail}/>
 								<textarea style={{rows: '5',}} placeholder='Message' onChange={this.handleMessageChange.bind(this)}  value={this.state.userMessage}>{this.state.userMessage}</textarea>
-								<button type='submit'>{this.state.submitText}</button>
+								<div className='form-btn-wrapper'>
+									<button type='submit' className='btn'>{this.state.submitText}</button>
+								</div>
 							</legend>
 						</form>
 					</fieldset>
